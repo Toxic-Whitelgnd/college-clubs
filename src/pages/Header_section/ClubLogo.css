@@ -1,0 +1,45 @@
+/* .logos{
+    display: grid;
+    
+} */
+
+
+
+.logo{
+    float:none;
+
+    display: flex;
+    flex-wrap: wrap;
+   
+    margin-left: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+}
+
+@media only screen and (max-width: 1300px)
+{
+    .logo{
+        margin-left: 300px;
+    }
+}
+@media only screen and (max-width: 920px)
+{
+    .logo{
+        margin-left: 100px;
+    }
+}
+@media only screen and (max-width: 814px)
+{
+    .logo{
+        margin-left: 70px;
+    }
+}
+@media only screen and (max-width: 350px)
+{
+    .logo{
+        margin-left: 50px;
+    }
+}

@@ -1,0 +1,201 @@
+.footer-container{
+    height: 450px;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+.footer-developed{
+
+    position: relative;
+    color:black;
+    display: flex;
+    /* height: 100%;
+    width: 100%; */
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.footer-dev{
+    font-size: 5vw;
+    text-shadow: 4px 4px 0px #c20909;
+    mix-blend-mode: screen;
+    animation: fadeIn 2.5s linear forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.footer-organisation{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 260px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: translate(-50%, -50%);
+    /* width: 100%; */
+    text-align: center;
+    color: red;
+}
+.footer-organisation span{
+    font-size: 15vw;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: -0.08em 0.03em 0.12em rgba(0,0,0,0.9);
+}
+.footer-organisation span:not(:first-child){
+    margin-left: -0.23em;
+}
+.footer-copyright{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    margin-top: 20px;
+}
+.footer-copyright h3{
+    color: white;
+}
+.footer-contact{
+    opacity: 0;
+    z-index: 0;
+}
+
+/* for mobile and tablets responsive */
+@media only screen and (max-width: 840px){
+    .footer-contact{
+        opacity: 1;
+        z-index: 1;
+    }
+    .footer-contact h2{
+        color: white;
+        margin-left: 10px;
+    }
+    .footer-contact .info{
+        list-style: none;
+        position: relative;
+        margin: 20px 0px;
+    }
+    .footer-contact .info li{
+        display: flex;
+        cursor: pointer;
+        align-items: flex-start;
+    }
+    /*this will be cahnging for mobile */
+    .footer-contact .info li span:nth-child(1) { 
+        width: 30px;
+        min-width: 30px;
+        
+    }
+    .footer-contact .info li span:nth-child(2){
+        color:white;
+        margin-left:10px;
+        font-weight: 300;
+        opacity: 0.5;
+    }
+    .footer-contact .info li:hover span:nth-child(1),
+    .footer-contact .info li:hover span:nth-child(2){
+        opacity:1;
+    }
+
+    .footer-contact .sci{
+        position: relative;
+        display: flex;
+
+    }
+    .footer-contact .sci li{
+        list-style: none;
+        margin-right: 10px;
+    }
+    .footer-contact .sci li a{
+        text-decoration: none;
+    }
+    .footer-contact .sci li a .socials1{
+        opacity: 0.5;
+        color: #686767;
+        font-size: 20px;
+    }
+    .footer-contact .sci li a:hover .socials1{
+        opacity: 1;
+        color: rgb(255, 254, 254);
+        font-size: 23px;
+    }
+    /* now akatsuki */
+    .footer-organisation{
+        margin-left: 380px;
+    }
+    /* footer cc */
+    .footer-copyright{
+        margin-top: 150px;
+    }
+
+
+}
+@media only screen and (max-width: 734px){
+    .footer-organisation{
+        margin-left: 310px;
+    }
+}
+@media only screen and (max-width: 606px){
+    .footer-organisation{
+        margin-left: 260px;
+    }
+    .footer-container{
+        overflow-x: hidden;
+    }
+}
+@media only screen and (max-width: 510px){
+    .footer-organisation{
+        
+        margin-left: 230px;
+    }
+
+}
+@media only screen and (max-width: 455px){
+    .footer-container{
+        height: 400px;
+    }
+    .footer-organisation{
+        margin-left: 150px;
+        margin-top: -20px;
+    }
+    .footer-contact{
+        margin-top: 50px;
+    }
+    .footer-copyright{
+        margin-top: 40px;
+
+    }
+    .footer-copyright h3{
+        font-size: 15px;
+    }
+  
+}
+@media only screen and (max-width: 360px){
+    .footer-organisation{
+        margin-left: 100px;
+        margin-top: -20px;
+    }
+    .footer-dev{
+        font-size: 5vw;
+        text-shadow: 4px 4px 0px #c20909;
+        mix-blend-mode: screen;
+    }
+    .footer-developed{
+        color:black;
+        padding: 1rem;
+    }
+    
+    .footer-copyright h3{
+        color: white;
+        font-size: 15px;
+
+    }
+
+}

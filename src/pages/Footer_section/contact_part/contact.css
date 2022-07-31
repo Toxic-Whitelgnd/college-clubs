@@ -1,0 +1,245 @@
+/* .contactus{
+    height:700px;
+    background-color:cadetblue;
+}
+
+.form-card{
+    height:500px;
+    width: 600px;
+    margin-left: 30px;
+    padding: 30px;
+    background-color: rgb(194, 177, 166);
+} */
+
+.club-name{
+    margin-top:10px;
+}
+.contactus{
+    overflow-x: hidden;
+}
+#clubownername{
+    margin-top: 50px;
+}
+.contact-card{
+    position:relative;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+    background: #112d42;
+
+}
+.contact-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #03a9f4;
+}
+.contact-card .conatainer{
+    position: relative;
+    /* min-width: 1100px; */
+    min-width: 550px;
+    display: flex;
+    z-index: 1000;
+}
+.contact-card .conatainer .contactinfo{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 180px);
+    background: #0f3959;
+    z-index: 1;
+    padding:40px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    flex-direction: column;
+    box-shadow: 0 20px 20px rgb(0, 0,0,0.2);
+
+    
+
+
+}
+.contact-card .conatainer .contactinfo h2{
+    color: white;
+    font-size:24px;
+    font-weight: 500;
+}
+.contact-card .conatainer .contactinfo .info{
+    position: relative;
+    margin: 20px 0;
+}
+.contact-card .conatainer .contactinfo .info li{
+    position:relative;
+    margin: 20px 0;
+    display: flex;
+    cursor: pointer;
+    align-items: flex-start;
+}
+.contact-card .conatainer .contactinfo .info li span:nth-child(1){
+    width: 30px;
+    min-width: 30px;
+
+}
+.contact-card .conatainer .contactinfo .info li span:nth-child(1) #loc{
+   max-width: 100%;
+   filter: invert(1);
+   opacity: 0.5;
+
+}
+
+.contact-card .conatainer .contactinfo .info li span:nth-child(2){
+    color: white;
+    margin-left:10px;
+    font-weight: 300;
+    opacity: 0.5;
+
+}
+.contact-card .conatainer .contactinfo .info li:hover span:nth-child(1),
+.contact-card .conatainer .contactinfo .info li:hover span:nth-child(2)
+{
+ opacity: 1;
+}
+
+
+.contact-card .conatainer .contactinfo .sci
+{
+    position: relative;
+    display: flex;
+
+}
+.contact-card .conatainer .contactinfo .sci li{
+    list-style: none;
+    margin-right: 15px;
+}
+.contact-card .conatainer .contactinfo .sci li a{
+    text-decoration: none;
+    
+}
+.contact-card .conatainer .contactinfo .sci li a .socials1{
+    opacity: 0.5;
+    color: #000000;
+    font-size: 21px;
+}
+.contact-card .conatainer .contactinfo .sci li:hover a .socials1{
+    opacity: 1;
+    color: rgb(255, 254, 254);
+    font-size: 25px;
+}
+/* for form */
+.contact-card .conatainer .contactform{
+    position: relative;
+    padding:70px 50px;
+    background: white;
+    margin-left: 150px;
+    padding-left: 250px;
+    width: calc(100% - 250px);
+    height:100%;
+    box-shadow:0 20px 20px rgba(0,0,0,0.5);
+}
+.contact-card .conatainer .contactform h2{
+    color:#0f3959;
+    font-size:24px;
+    font-weight:500;
+}
+.contact-card .conatainer .contactform .formbox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.contact-card .conatainer .contactform .formbox .inputBox{
+    position: relative;
+    margin: 0 0 35px 0;
+
+}
+.contact-card .conatainer .contactform .formbox .inputBox.w50{
+    width: 47%;
+}
+.contact-card .conatainer .contactform .formbox .inputBox.w100{
+    width:100%
+}
+.contact-card .conatainer .contactform .formbox .inputBox input,
+.contact-card .conatainer .contactform .formbox .inputBox textarea{
+    width:100%;
+    padding: 5px 0;
+    resize: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border:none;
+    border-bottom: 1px solid #777;
+    outline: none;
+}
+.contact-card .conatainer .contactform .formbox .inputBox textarea{
+    min-height: 120px;
+}
+.contact-card .conatainer .contactform .formbox .inputBox span{
+   position: absolute;
+   left: 0;
+   padding: 5px 0;
+    font-size: 18px;
+    color:#333;
+    transition:0.5s;
+    pointer-events: none;
+}
+
+.contact-card .conatainer .contactform .formbox .inputBox input:focus ~ span,
+.contact-card .conatainer .contactform .formbox .inputBox textarea:focus ~ span,
+.contact-card .conatainer .contactform .formbox .inputBox input:valid ~ span,
+.contact-card .conatainer .contactform .formbox .inputBox textarea:valid ~ span{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ff568c;
+}
+
+/* for mobile  */
+@media only screen and (max-width: 840px){
+    .contact-card .conatainer .contactinfo{
+        opacity: 0;
+        z-index: 0;
+    }
+    .contact-card .conatainer .contactform{
+        padding:50px 30px;
+        background: white;
+        margin-left: 100px;
+        padding-left: 100px;
+        width: calc(100% - 250px);
+    }
+}
+@media only screen and (max-width: 660px){
+    .contact-card .conatainer .contactform{
+        padding-left: 10px;
+    }
+}
+@media only screen and (max-width: 550px){
+    .contact-card .conatainer .contactform{
+        padding-left: 10px;
+        margin-left: 120px;
+    }
+    .contact-card .conatainer{
+        overflow: hidden;
+        max-width: 530px;
+    }
+   
+}
+
+@media only screen and (max-width: 370px){
+    .contact-card .conatainer{
+        overflow: hidden;
+        max-width: 500px;
+    }
+    .contact-card .conatainer .contactform{
+        padding-left: 0px;
+        margin-left: 130px;
+        padding: 10px;
+        overflow: hidden;
+    }
+    
+}

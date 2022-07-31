@@ -1,0 +1,60 @@
+.AvailableClub{
+  height:auto;
+  background-color: burlywood;
+  overflow: hidden;
+  display: grid;
+    row-gap: 30px;
+    /* grid-column-start: 1;
+    grid-column-end: 2;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly; */
+   
+}
+
+.card-container{
+  
+    display: grid;
+    row-gap: 30px;
+    /* grid-column-start: 1;
+    grid-column-end: auto; */
+    grid-template-columns: auto auto auto;
+    /* justify-content: space-evenly; */
+    margin: 20px;
+}
+.imagehover{
+  transition: transform .2s;
+}
+.description{
+  padding-top: 10px;
+}
+.socials{
+  padding: 10px;
+}
+.insta{
+  color: #bc318f;
+}
+
+.imagehover:hover{
+  transform: scale(1.2);
+}
+@media only screen and (max-width: 985px) {
+  .card-container{
+    display:grid;
+    grid-template-columns:auto auto;
+    justify-content: center;
+    text-align: center;
+
+  }
+}
+@media only screen and (max-width: 658px) {
+  .card-container{
+    display:grid;
+    grid-template-columns:auto;
+    justify-content: center;
+    text-align: center;
+
+  }
+}
+
+
+

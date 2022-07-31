@@ -1,0 +1,11 @@
+/* 0B1240 */
+.Hcontainer{
+    background-color: #0B1240;
+    height:150px;
+    display: flex;
+
+    /* for fixed navbar */
+    /* position: fixed; 
+    top: 0; 
+    width: 100%;  */
+}
