@@ -32,7 +32,7 @@ const Clubs = () => {
                 <h2>Music</h2>
                 <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                 text ever since the 1500s, when an unknown printer took a galley. 
+                 text ever since the 1500s.
                  <a href="#">Explore</a>
                 </p>
             </div>
@@ -48,15 +48,14 @@ const Clubs = () => {
                 <h2>Dance</h2>
                 <p id="dancecontent">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                 text ever since the 1500s, when an unknown printer took a galley.
+                 text ever since the 1500s.
                  <a href="#">Explore</a>
                 </p>
             </div>
             <img src="https://data.whicdn.com/images/205455629/original.gif" alt="danceband" className="danceb"></img>
         </div>
         {/* for coding */}
-        <div className="cards" data-aos="fade-right" data-aos-duration="2000"  data-aos-mirror="true"
-         data-aos-anchor-placement="center-center">
+        <div className="cards" data-aos="fade-right" data-aos-duration="2000"  data-aos-mirror="true">
             <div className="circle">
                <Diico.DiCode className="code"/>
             </div>
@@ -65,15 +64,14 @@ const Clubs = () => {
                 <h2>Coding</h2>
                 <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                 text ever since the 1500s, when an unknown printer took a galley.
+                 text ever since the 1500s.
                  <a href="#">Explore</a>
                 </p>
             </div>
             <img src="https://c.tenor.com/AlUkiGkR2j8AAAAM/new-game-ahagon-umiko-programming.gif" alt="codeband" className="codeb"></img>
         </div>
         {/* for e-sports */}
-        <div className="cards" data-aos="fade-left" data-aos-duration="2000" data-aos-mirror="true"
-        data-aos-anchor-placement="bottom-center">
+        <div className="cards" data-aos="fade-left" data-aos-duration="2000" data-aos-mirror="true">
             <div className="circle">
                <Mdico.MdSportsEsports className="esport"/>
             </div>
@@ -82,7 +80,7 @@ const Clubs = () => {
                 <h2>E-sports</h2>
                 <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                 text ever since the 1500s, when an unknown printer took a galley.
+                 text ever since the 1500s.
                  <a href="#">Explore</a>
                 </p>
             </div>

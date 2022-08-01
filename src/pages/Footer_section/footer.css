@@ -175,6 +175,9 @@
     .footer-copyright h3{
         font-size: 15px;
     }
+    .footer-dev{
+        text-shadow: 2px 2px 0px #c20909;
+    }
   
 }
 @media only screen and (max-width: 360px){
@@ -184,7 +187,7 @@
     }
     .footer-dev{
         font-size: 5vw;
-        text-shadow: 4px 4px 0px #c20909;
+        text-shadow: 2px 2px 0px #c20909;
         mix-blend-mode: screen;
     }
     .footer-developed{

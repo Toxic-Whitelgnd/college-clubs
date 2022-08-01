@@ -7,6 +7,9 @@ import Popover from 'react-bootstrap/Popover';
 
 import Tilt from 'react-parallax-tilt';
 
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from 'react';
 
 import * as Siico from "react-icons/si"
 
@@ -20,6 +23,9 @@ const Availableclub = () => {
           </Popover.Body>
         </Popover>
       );
+      useEffect(()=>{
+        Aos.init()
+      },[])
     return (
         <div className="AvailableClub">
             <h2>Available Clubs</h2>
@@ -35,8 +41,9 @@ const Availableclub = () => {
 
                     return(
                         <div className="card-container">
-                        <Tilt tiltMaxAngleX={40} tiltMaxAngleY={65} >
-                        <Card className="card-cc" border={value.border}  key={index} style= {{width: '18rem'}} >
+                        <Tilt tiltMaxAngleX={15} tiltMaxAngleY={25} >
+                        <Card className="card-cc" border={value.border}  key={index} style= {{width: '18rem'}}
+                        data-aos={value.framework} data-aos-duration="1000"  data-aos-mirror="true" >
                             <Card.Img variant="top" src={value.img} className="imagehover" />
                             <Card.Body className="card-cb">
                                 <Card.Title>{value.title}</Card.Title>

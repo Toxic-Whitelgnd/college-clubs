@@ -4,7 +4,14 @@ import * as Aiico from "react-icons/ai"
 import * as Siico from "react-icons/si"
 import * as Mdico from "react-icons/md"
 
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from 'react';
+
 const Footer = () => {
+  useEffect(()=>{
+    Aos.init()
+  },[])
     return (
         <div className="footer-container">
           
@@ -12,7 +19,7 @@ const Footer = () => {
                 <h2 className="footer-dev">Developed By</h2>
             </div>
             
-            <div className="footer-organisation">
+            <div className="footer-organisation" data-aos="zoom-out-up">
                 <span>A</span>
                 <span>K</span>
                 <span>A</span>

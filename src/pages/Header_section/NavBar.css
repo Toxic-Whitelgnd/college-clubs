@@ -86,11 +86,12 @@
     }
     .menu {
       position: absolute;
-      top: 0;
+      /* top: 0; */
+      margin-left: 50px;
       margin-top: 50px;
       left: 0;
       flex-direction: column;
-      width: 100%;
+      /* width: 100%; */
       justify-content: center;
       align-items: center;
     }

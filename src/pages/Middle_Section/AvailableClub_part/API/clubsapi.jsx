@@ -13,7 +13,8 @@ const data = [
         linkedin:"#",
         link:"#",
         class:"card1",
-        border:"primary"
+        border:"primary",
+        framework:"fade-up"
     
     },
     {
@@ -29,6 +30,7 @@ const data = [
         owner:"Virat Kholi",
         link:"#",
         class:"card2",
+        framework:"fade-down",
         border:"dark"
     
     },
@@ -45,6 +47,7 @@ const data = [
         owner:"Virat Kholi",
         link:"#",
         class:"card3",
+        framework:"fade-right",
         border:"info"
     
     },
@@ -61,6 +64,7 @@ const data = [
         facebook:"#",
         instagram:"#",
         linkedin:"#",
+        framework:"fade-left",
         border:"warning"
     
     },
@@ -77,6 +81,7 @@ const data = [
         facebook:"#",
         instagram:"#",
         linkedin:null,
+        framework:"zoom-in",
         border:"secondary"
     
     },
