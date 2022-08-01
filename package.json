@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Toxic-Whitelgnd.github.io/collage-clubs",
   "name": "clgclubs",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.0",
+    "gh-pages": "^4.0.0",
     "mdb-react-ui-kit": "^4.1.0",
     "node-sass": "^7.0.1",
     "react": "^18.2.0",
@@ -24,6 +26,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "set PORT=5000 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
