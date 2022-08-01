@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/collage-clubs/static/css/main.db886fa6.css",
+    "main.css": "/collage-clubs/static/css/main.22ef3b67.css",
     "main.js": "/collage-clubs/static/js/main.c500f486.js",
     "static/js/787.537bcdc6.chunk.js": "/collage-clubs/static/js/787.537bcdc6.chunk.js",
     "static/media/3.jpg": "/collage-clubs/static/media/3.9995b28e22b13f3ed4f1.jpg",
@@ -16,12 +16,12 @@
     "static/media/music3trans.png": "/collage-clubs/static/media/music3trans.d06b55374449729e86db.png",
     "static/media/dance3trans.png": "/collage-clubs/static/media/dance3trans.f3df8d485de971d7cef4.png",
     "index.html": "/collage-clubs/index.html",
-    "main.db886fa6.css.map": "/collage-clubs/static/css/main.db886fa6.css.map",
+    "main.22ef3b67.css.map": "/collage-clubs/static/css/main.22ef3b67.css.map",
     "main.c500f486.js.map": "/collage-clubs/static/js/main.c500f486.js.map",
     "787.537bcdc6.chunk.js.map": "/collage-clubs/static/js/787.537bcdc6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db886fa6.css",
+    "static/css/main.22ef3b67.css",
     "static/js/main.c500f486.js"
   ]
 }
