@@ -20,12 +20,22 @@
     grid-template-columns: auto auto auto;
     /* justify-content: space-evenly; */
     margin: 20px;
+    
+
 }
 .imagehover{
   transition: transform .2s;
 }
+.card-cc{
+  transform-style: preserve-3d;
+  transform: perspective(1000px); 
+}
+.card-cb{
+  transform: translateZ(30px);
+}
 .description{
   padding-top: 10px;
+  
 }
 .socials{
   padding: 10px;
@@ -55,6 +65,7 @@
 
   }
 }
+
 
 
 

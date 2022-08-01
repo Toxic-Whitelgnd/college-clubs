@@ -5,6 +5,9 @@ import { Card,Button } from 'react-bootstrap';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 
+import Tilt from 'react-parallax-tilt';
+
+
 import * as Siico from "react-icons/si"
 
 
@@ -32,9 +35,10 @@ const Availableclub = () => {
 
                     return(
                         <div className="card-container">
-                        <Card border={value.border}  key={index} style= {{width: '18rem'}}>
+                        <Tilt tiltMaxAngleX={40} tiltMaxAngleY={65} >
+                        <Card className="card-cc" border={value.border}  key={index} style= {{width: '18rem'}} >
                             <Card.Img variant="top" src={value.img} className="imagehover" />
-                            <Card.Body>
+                            <Card.Body className="card-cb">
                                 <Card.Title>{value.title}</Card.Title>
                                 <Card.Subtitle>{value.type}</Card.Subtitle>
                                 <Card.Text className="description">{value.description}
@@ -50,10 +54,15 @@ const Availableclub = () => {
 
                                 <Button variant="primary" onClick={()=> openweb(value.link)}>website</Button>
                             </Card.Body>
-
+                            
 
 
                         </Card>
+                        </Tilt>
+                        
+                        
+                    
+
                         </div>
                         
                     );

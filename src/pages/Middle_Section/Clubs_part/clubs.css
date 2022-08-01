@@ -34,7 +34,7 @@
 }
 .cards:hover{
     width:800px;
-    transition-delay: 0s;
+    transition-delay: 1s;
     
 
 }
@@ -74,6 +74,7 @@
     height: 100px;
     width: 150px;
     margin-left: 60px;
+    color: black;
 }
 .cards .circle .music{
     position: relative;
@@ -150,6 +151,7 @@
     height: 100px;
     width: 150px;
     margin-left: 60px;
+    color: black;
 }
 .cards .circle .dance{
     position: relative;
@@ -185,6 +187,7 @@
     height: 150px;
     width: 150px;
     margin-left: 70px;
+    color: black;
 }
 .cards .circle .code{
     position: relative;
@@ -220,6 +223,7 @@
     height: 150px;
     width: 150px;
     margin-left: 70px;
+    color: black;
 }
 .cards .circle .esport{
     position: relative;

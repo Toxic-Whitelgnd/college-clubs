@@ -10,24 +10,26 @@ import img6 from "../Home_part/images/dance3trans.png"
 import img7 from "../Home_part/images/esportstrans.png"
 import img8 from "../Home_part/images/codingtrans.png"
 
-const Home = () => {
+class Home extends React.Component {
+    state = {x:0,y:0}
+    mouse_move = (e) =>{
+        this.setState({x:e.clientX,y:e.clientY})
+        document.querySelectorAll(".object").forEach(object =>{
+            const speed = object.getAttribute("data-value");
 
-    // nneed to add paraalx events
-    document.addEventListener("mousemove",parallx)
-    function parallx(e){
-        document.querySelectorAll(".object").forEach(object => {
-            const speed = object.getAttribute("data-speed");
-
-            const x = (window.innerWidth - e.pageX*speed)/100
+            const x = (window.innerWidth - e.pageX*speed)/100             
             const y = (window.innerHeight - e.pageY*speed)/100
 
             object.style.transform = `translateX(${x}px) translateY(${y}px)`
         })
+        
     }
 
+ render() {
+    const {x, y} = this.state
     return (
         <div className="home-container">
-        <div className='container-p'>
+        <div className='container-p' onMouseMove={this.mouse_move} >
             {/* start coding here */}
             <h2 className='object' data-value="3">Cllg<br></br><span>Clubs</span></h2>
 
@@ -42,8 +44,26 @@ const Home = () => {
 
         </div>
         </div>
-    );
+    )
 }
+}
+    // nneed to add paraalx events
+//     document.addEventListener("mousemove",parallx)
+//     function parallx(e){
+//         document.querySelectorAll(".object").forEach(object => {
+//             const speed = object.getAttribute("data-speed");
+
+//             const x = (window.innerWidth - e.pageX*speed)/100
+//             const y = (window.innerHeight - e.pageY*speed)/100
+
+//             object.style.transform = `translateX(${x}px) translateY(${y}px)`
+//         })
+//     }
+
+//     return (
+        
+//     );
+// }
 // rework is there for this after going to home
 
 export default Home;

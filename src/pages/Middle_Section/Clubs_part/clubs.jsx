@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import "../Clubs_part/clubs.css"
 import music from "../Clubs_part/images/music.png"
 import esports from "../Clubs_part/images/esports.png"
@@ -8,15 +9,21 @@ import * as Siico from "react-icons/si"
 import * as Diico from "react-icons/di"
 import * as Mdico from "react-icons/md"
 
+import Aos from "aos"
+import "aos/dist/aos.css"
+
 const Clubs = () => {
+    useEffect(()=>{
+        Aos.init()
+      },[])
     return (
         <>
         <div className="ClubContainer">
-            clubs
         
         <div className="clubcard">
         {/* for music */}
-        <div className="cards">
+        <div className="cards" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-easing="ease-in-out"
+        data-aos-mirror="true">
             <div className="circle">
                <Biico.BiMusic className="music"/>
             </div>
@@ -32,7 +39,7 @@ const Clubs = () => {
             <img src={music} alt="musciband" className="musicb"></img>
         </div>
         {/* for dance */}
-        <div className="cards">
+        <div className="cards" data-aos="zoom-in-left" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-mirror="true">
             <div className="circle">
                <Siico.SiBytedance className="dance"/>
             </div>
@@ -48,7 +55,8 @@ const Clubs = () => {
             <img src="https://data.whicdn.com/images/205455629/original.gif" alt="danceband" className="danceb"></img>
         </div>
         {/* for coding */}
-        <div className="cards">
+        <div className="cards" data-aos="fade-right" data-aos-duration="2000"  data-aos-mirror="true"
+         data-aos-anchor-placement="center-center">
             <div className="circle">
                <Diico.DiCode className="code"/>
             </div>
@@ -64,7 +72,8 @@ const Clubs = () => {
             <img src="https://c.tenor.com/AlUkiGkR2j8AAAAM/new-game-ahagon-umiko-programming.gif" alt="codeband" className="codeb"></img>
         </div>
         {/* for e-sports */}
-        <div className="cards">
+        <div className="cards" data-aos="fade-left" data-aos-duration="2000" data-aos-mirror="true"
+        data-aos-anchor-placement="bottom-center">
             <div className="circle">
                <Mdico.MdSportsEsports className="esport"/>
             </div>
