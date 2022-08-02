@@ -1,39 +1,117 @@
 
 import "../contact_part/contact.css"
 import React, { useState } from 'react';
-import {
-  MDBValidation,
-  MDBValidationItem,
-  MDBInput,
-  MDBBtn,
-  MDBCheckbox,
-  MDBInputGroup
-} from 'mdb-react-ui-kit';
 import * as Siico from "react-icons/si"
 import * as Mdico from "react-icons/md"
 import {Button} from "react-bootstrap"
 
+import { Alert } from '@mui/material';
+
+
 
 export default function Contact() {
-  const [formValue, setFormValue] = useState({
-    clubownername:'',
-    clubname:'',
-    clubtype:'',
-    clubdescription:'',
-    clubemail:'',
-    clubcontact:'',
-    clubwebsite:'',
 
 
-  });
 
-  const onChange = (e) => {
-    setFormValue({ ...formValue, [e.target.name]: e.target.value });
-  };
+  const [clubownername, setclubownername] = useState('');
+  const [clubname, setclubname] = useState('');
+  const [clubemail, setclubemail] = useState('');
+  const [clubcontact, setclubcontact] = useState('');
+  const [clubtype, setclubtype] = useState('');
+  const [clubdescription,setclubdescription] = useState('');
 
+
+  const detailsvalidationfunc = () => {
+    if (clubownername,clubemail,clubtype,clubname,clubcontact, clubdescription === ''){
+      window.alert("Please enter your details")
+      
+    }
+    else{
+      const clubdetails = {
+        'cowner':clubownername,
+        'cname':clubname,
+        'ctype':clubtype,
+        'cdesc':clubdescription,
+        'cmail':clubemail,
+        'ccontact':clubcontact,
+        
+      }
+
+      console.log(clubdetails);
+      console.log(clubdetails['cmail']);
+      var email = clubdetails['cmail'];
+      var mobilenum = clubdetails['ccontact'];
+
+      // for validation
+      emailandmobilevalidation(email,mobilenum,clubdetails);
+  
+
+    }
+  }
+
+  const emailandmobilevalidation = (email,mobilenum,clubdetails) => {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var mobformat = ('[0-9]{10}')
+    if(email.match(mailformat) &&  (mobilenum.match(mobformat))) {
+      console.log("valid email and mobilenumber")
+      sendfunc(clubdetails);
+    }
+    else{
+      alert('Please enter a valid mailformat or check your mobilenumber')
+    }
+  }
+
+
+
+  const sendfunc = (clubdetails) => {
+    
+    
+    <Alert severity="error" variant="outlined" color="error" >wtf not working !!</Alert>
+
+    console.log(clubdetails);
+
+    // need to pass the data to the server
+
+    window.alert("Your Response has been sumbited! 😎");
+    
+    
+   
+    // needd to stringify the data into json
+    var clubdetails = JSON.stringify(clubdetails);
+    console.log(clubdetails);
+
+    
+
+    // need to clear the data fields
+    cleardetails(clubdetails);
+
+  }
+ 
+  const cleardetails = (clubdetails) => {
+    // clubdescription = '',
+    console.log("came to clear section")
+
+    // this is for debugging purposes
+    var clubdetails = JSON.parse(clubdetails);
+    console.log(clubdetails["cowner"]);
+
+    // this is the part we are clearing the data fields
+    setclubdescription("")
+    setclubownername("")
+    setclubname("")
+    setclubemail("")
+    setclubtype("")
+    setclubcontact("")
+    setclubdescription("")
+
+  }
+
+  
 
 
   return (
+    
+
     <div className="contactus">
       <section className="contact-card">
       <div className="conatainer">
@@ -70,31 +148,31 @@ export default function Contact() {
         <h2>Want to Display your club?</h2>
         <div className="formbox">
           <div className="inputBox w50">
-            <input type="text" name="" required />
+            <input type="text" value={clubownername}  onChange={e => setclubownername(e.target.value)} name="" required />
             <span>ClubOwnerName</span>
           </div>
           <div className="inputBox w50">
-            <input type="text" name="" required />
+            <input type="tel" value={clubcontact} minLength="10" maxLength="10" onChange={e => setclubcontact(e.target.value)} name="" required />
             <span>Contact Number</span>
           </div>
           <div className="inputBox w50">
-            <input type="text" name="" required />
+            <input type="text" value={clubname} onChange={e => setclubname(e.target.value)} name="" required />
             <span>ClubName</span>
           </div>
           <div className="inputBox w50">
-            <input type="text" name="" required />
+            <input type="text" value={clubtype} onChange={e => setclubtype(e.target.value)} name="" required />
             <span>ClubType</span>
           </div>
           <div className="inputBox w50">
-            <input type="text" name="" required />
+            <input type="text" value={clubemail} onChange={e => setclubemail(e.target.value)} name="" required />
             <span>Email</span>
           </div>
           <div className="inputBox w100">
-            <textarea type="text" name="" required />
+            <textarea type="text" value={clubdescription} onChange={e => setclubdescription(e.target.value)} name="" required />
             <span>ClubDecsription</span>
           </div>
           <div className="inputBox w50">
-            <Button type="sumbit" variant="primary">Send</Button>
+            <Button type="sumbit" onClick={detailsvalidationfunc} variant="primary">Send</Button>
           </div>
         </div>
       </div>

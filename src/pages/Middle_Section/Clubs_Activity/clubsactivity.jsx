@@ -48,7 +48,7 @@ const Clubsactivity = () => {
             alt="fourth slide"
             />
             <Carousel.Caption>
-            <h3>Hookah</h3>
+            <h3>Coding</h3>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
             </Carousel.Caption>
         </Carousel.Item>
