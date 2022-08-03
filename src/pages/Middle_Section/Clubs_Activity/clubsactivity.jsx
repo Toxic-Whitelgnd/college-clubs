@@ -1,14 +1,16 @@
 import React from 'react';
 import {Carousel} from "react-bootstrap"
-import img1 from  "../Clubs_Activity/images/1.jpg"
-import img2 from  "../Clubs_Activity/images/1.jpg"
-import img3 from  "../Clubs_Activity/images/1.jpg"
+import img1 from  "../Clubs_Activity/images/c1.jpg"
+import img2 from  "../Clubs_Activity/images/c2.jpg"
+import img3 from  "../Clubs_Activity/images/c3.png"
+import img4 from  "../Clubs_Activity/images/c4.jpg"
+import "../Clubs_Activity/clubactivity.css"
 
 const Clubsactivity = () => {
     return (
     <div>
     <Carousel>
-        <Carousel.Item interval={1000}>
+        <Carousel.Item interval={1000} className="c1">
             <img
             className="d-block w-100"
             src={img1}
@@ -44,7 +46,7 @@ const Clubsactivity = () => {
         <Carousel.Item>
             <img
             className="d-block w-100"
-            src={img2}
+            src={img4}
             alt="fourth slide"
             />
             <Carousel.Caption>

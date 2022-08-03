@@ -129,21 +129,21 @@ export default function Contact() {
               </li>
               <li>
                 <span><Siico.SiGmail  id="loc"/></span>
-                <span>akatsuki99@gmail.com</span>
+                <span>akatsukiorganisation999@gmail.com</span>
               </li>
               <li>
                 <span><Mdico.MdPhone id="loc" /></span>
-                <span>91+ 345345353 </span>
+                <span>91+ 8610683202 </span>
               </li>
 
 
             </ul>
             </div>
             <ul className="sci">
-                <li><a href='#'><Siico.SiFacebook className="socials1"/></a></li>
-                <li><a href='#'><Siico.SiInstagram className="socials1"/></a></li>
-                <li><a href='#'><Siico.SiLinkedin className="socials1"/></a></li>
-                <li><a href='#'><Siico.SiTwitter className="socials1"/></a></li>
+                <li><a href='https://www.facebook.com/TheBestBrotherEver/'><Siico.SiFacebook className="socials1"/></a></li>
+                <li><a href='https://www.instagram.com/t_a_r_u_n_s_k_/'><Siico.SiInstagram className="socials1"/></a></li>
+                <li><a href='https://www.linkedin.com/in/tarun-s-k-737349207/'><Siico.SiLinkedin className="socials1"/></a></li>
+                <li><a href='https://twitter.com/home'><Siico.SiTwitter className="socials1"/></a></li>
             </ul>
 
           

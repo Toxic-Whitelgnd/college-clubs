@@ -28,7 +28,7 @@ const Availableclub = () => {
       },[])
     return (
         <div className="AvailableClub">
-            <h2>Available Clubs</h2>
+            <div data-text="Available Club" class="light">Available Clubs</div>
         <div className="card-container">
            
             {
@@ -46,8 +46,8 @@ const Availableclub = () => {
                         data-aos={value.framework} data-aos-duration="1000"  data-aos-mirror="true" >
                             <Card.Img variant="top" src={value.img} className="imagehover" />
                             <Card.Body className="card-cb">
-                                <Card.Title>{value.title}</Card.Title>
-                                <Card.Subtitle>{value.type}</Card.Subtitle>
+                                <Card.Title id="title">{value.title}</Card.Title>
+                                <Card.Subtitle id="subtitle">{value.type}</Card.Subtitle>
                                 <Card.Text className="description">{value.description}
                                 </Card.Text>
 
@@ -59,7 +59,7 @@ const Availableclub = () => {
                                 <Card.Link className="insta" href={value.instagram}><Siico.SiInstagram></Siico.SiInstagram></Card.Link>
                                 </div>
 
-                                <Button variant="primary" onClick={()=> openweb(value.link)}>website</Button>
+                                <Button variant="primary" onClick={()=> openweb(value.link)}>Website</Button>
                             </Card.Body>
                             
 

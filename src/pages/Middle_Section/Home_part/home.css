@@ -29,16 +29,18 @@
 .container-p h2{
     z-index: 1;
     position: relative;
-    color: #fff;
+    color: #0B1240;
     font-size:90px;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 600;
     letter-spacing:32px;
+    font-family: 'Rubik Glitch', cursive;
 }
 .container-p h2 span{
     font-size:48px;
-    font-weight:500;
+    font-weight:200;
     letter-spacing:10px;
+    font-family: 'Rubik Wet Paint', cursive;
 }
 
 @media(max-width:800px)

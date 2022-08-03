@@ -1,3 +1,7 @@
+.nav-text{
+  font-family: 'Rajdhani', sans-serif;
+}
+
 .top-nav {
     display: flex;
     flex-direction: row;

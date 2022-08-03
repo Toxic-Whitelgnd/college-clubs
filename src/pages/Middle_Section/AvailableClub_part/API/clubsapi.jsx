@@ -1,9 +1,15 @@
 import img1 from "../API/images/3.jpg"
+import img2 from "../API/images/a2.jpg"
+import img3 from "../API/images/a4.jpg"
+import img4 from "../API/images/a5.jpg"
+import img5 from "../API/images/a6.jpg"
+import img6 from "../API/images/a7.jpg"
+
 
 const data = [
     {
         id:1,
-        img:img1,
+        img:img4,
         alt:"images",
         type:"Dance",
         title:"A2D Dance CLUB",
@@ -19,13 +25,13 @@ const data = [
     },
     {
         id:2,
-        img:img1,
+        img:img6,
         alt:"images",
         type:"coding",
         facebook:"#",
         instagram:"#",
         linkedin:"#",
-        title:"JU codeacdemy ClUB",
+        title:"JU codeacdemy CLUB",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
         owner:"Virat Kholi",
         link:"#",
@@ -36,10 +42,10 @@ const data = [
     },
     {
         id:3,
-        img:img1,
+        img:img5,
         alt:"images",
         type:"coding",
-        title:"Google GDC ClUB",
+        title:"Google GDC CLUB",
         facebook:"#",
         instagram:"#",
         linkedin:"#",
@@ -53,10 +59,10 @@ const data = [
     },
     {
         id:4,
-        img:img1,
+        img:img2,
         alt:"images",
         type:"music",
-        title:"Saregama ClUB",
+        title:"Saregama CLUB",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
         owner:"Virat Kholi",
         link:"#",
@@ -70,7 +76,7 @@ const data = [
     },
     {
         id:5,
-        img:img1,
+        img:img3,
         alt:"images",
         type:"Dance",
         title:"Rock and Roll",
