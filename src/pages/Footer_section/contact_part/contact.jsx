@@ -1,13 +1,13 @@
 
 import "../contact_part/contact.css"
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import * as Siico from "react-icons/si"
 import * as Mdico from "react-icons/md"
 import {Button} from "react-bootstrap"
 
 import { Alert } from '@mui/material';
 
-
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
 
@@ -72,28 +72,18 @@ export default function Contact() {
 
     // need to pass the data to the server
 
-    window.alert("Your Response has been sumbited! 😎");
-    
-    
-   
     // needd to stringify the data into json
     var clubdetails = JSON.stringify(clubdetails);
     console.log(clubdetails);
 
-    
-
-    // need to clear the data fields
-    cleardetails(clubdetails);
 
   }
  
-  const cleardetails = (clubdetails) => {
+  const cleardetails = () => {
     // clubdescription = '',
     console.log("came to clear section")
 
-    // this is for debugging purposes
-    var clubdetails = JSON.parse(clubdetails);
-    console.log(clubdetails["cowner"]);
+ 
 
     // this is the part we are clearing the data fields
     setclubdescription("")
@@ -106,6 +96,20 @@ export default function Contact() {
 
   }
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_d8ypxfs', 'template_2qbic2q', form.current, 'FaIW_sH1b_l1x5lcS')
+      .then((result) => {
+          console.log(result.text);
+          window.alert("Your Response has been sumbited! 😎");
+          cleardetails();
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   
 
 
@@ -146,35 +150,37 @@ export default function Contact() {
       </div>
       <div  className="contactform">
         <h2>Want to Display your club?</h2>
+        <form ref={form} onSubmit={sendEmail}>
         <div className="formbox">
           <div className="inputBox w50">
-            <input type="text" value={clubownername}  onChange={e => setclubownername(e.target.value)} name="" required />
+            <input type="text" value={clubownername}  onChange={e => setclubownername(e.target.value)} name="clubownername"  required />
             <span>ClubOwnerName</span>
           </div>
           <div className="inputBox w50">
-            <input type="tel" value={clubcontact} minLength="10" maxLength="10" onChange={e => setclubcontact(e.target.value)} name="" required />
+            <input type="tel" value={clubcontact} minLength="10" maxLength="10" onChange={e => setclubcontact(e.target.value)} name="clubcontact" required />
             <span>Contact Number</span>
           </div>
           <div className="inputBox w50">
-            <input type="text" value={clubname} onChange={e => setclubname(e.target.value)} name="" required />
+            <input type="text" value={clubname} onChange={e => setclubname(e.target.value)} name="clubname" required />
             <span>ClubName</span>
           </div>
           <div className="inputBox w50">
-            <input type="text" value={clubtype} onChange={e => setclubtype(e.target.value)} name="" required />
+            <input type="text" value={clubtype} onChange={e => setclubtype(e.target.value)} name="clubtype" required />
             <span>ClubType</span>
           </div>
           <div className="inputBox w50">
-            <input type="text" value={clubemail} onChange={e => setclubemail(e.target.value)} name="" required />
+            <input type="text" value={clubemail} onChange={e => setclubemail(e.target.value)} name="clubemail" required />
             <span>Email</span>
           </div>
           <div className="inputBox w100">
-            <textarea type="text" value={clubdescription} onChange={e => setclubdescription(e.target.value)} name="" required />
+            <textarea type="text" value={clubdescription} onChange={e => setclubdescription(e.target.value)} name="clubdescription" required />
             <span>ClubDecsription</span>
           </div>
           <div className="inputBox w50">
             <Button type="sumbit" onClick={detailsvalidationfunc} variant="primary">Send</Button>
           </div>
         </div>
+        </form>
       </div>
     
 
@@ -187,156 +193,3 @@ export default function Contact() {
 
 
 
-{/* <Form className="form-card">
-              <div className="club-name">
-                <label >Club Name</label>
-                <input type="text"  value={this.state.clubname} onChange={this.handleChangeclubname} />
-              </div>
-              <div className="club-ownername">
-                <label>Club Owner Name</label>
-                <input type="text" value={this.state.clubowner} onChange={this.handleChangeclubowner} />
-              </div>
-              <div className="club-type">
-                <label >Club type </label>
-                <input type="text" placeholder='dance,coding...' value={this.setState.clubtype} onChange={this.handleChangeclubtype} />
-              </div>
-              <div className="club-contact">
-                <label>Contact Number</label>
-                <input type="phone" value={this.state.contact} onChange={this.handleChangeclubcontact} /> 
-              </div>
-              <div className="club-email">
-                <label>Email</label>
-                <input type="email" value={this.state.email} onChange={this.handleChangeclubemail} />
-              </div>
-
-              <Button variant="outline-primary">sumbit</Button>
-              
-
-            </Form>  */}
-
-
-            // constructor(props) {
-            //   super(props)
-            
-            //   this.state = {
-            //     clubname: '',
-            //     clubowner: '',
-            //     clubtype:'',
-            //     clubcontact:'',
-            //     clubemail:''
-            //   }
-            // }
-          
-            
-          
-            // handleChangeclubname = (e) => {
-            //   this.setState({clubname: e.target.value})
-             
-            // }
-            // handleChangeclubowner = (e) => {
-            //   this.setState({clubowner: e.target.value})
-            // }
-            // handleChangeclubtype = (e) => {
-            //   this.setState({clubtype: e.target.value})
-            // }
-            // handleChangeclubcontact = (e) => {
-            //   this.setState({clubcontact:e.target.value})
-            // }
-            // handleChangeclubemail = (e) => {
-            //   this.setState({clubemail: e.target.value})
-            // }
-        
-
-            // <div className="form-card">
-            // <MDBValidation > 
-              
-            //   <MDBValidationItem feedback="Enter your ClubName" invalid>
-            //     <MDBInput
-            //       value={formValue.clubname}
-            //       name="clubname"
-            //       onChange={onChange}
-            //       id="clubname"
-            //       required
-            //       label="Club-Name"
-            //       />
-            //   </MDBValidationItem>
-            //   <MDBValidationItem  feedback="Enter a OwnerName" invalid>
-            //   <MDBInput
-            //   value={formValue.clubcontact}
-            //   name='fname'
-            //   onChange={onChange}
-            //   id='validationCustom01'
-            //   required
-            //   label='Clubownername'
-            // />
-            //   </MDBValidationItem>
-            //   <div>
-            //   <MDBBtn type='submit'>Submit form</MDBBtn>
-            //   <MDBBtn type='reset'>Reset form</MDBBtn>
-            //   </div>
-              
-            // </MDBValidation>
-    
-
-            
-    {/* <MDBValidation className='row g-3'>
-      <MDBValidationItem className='col-md-4' feedback="enter a first name" invalid>
-        <MDBInput
-          value={formValue.fname}
-          name='fname'
-          onChange={onChange}
-          id='validationCustom01'
-          required
-          label='First name'
-        />
-      </MDBValidationItem>
-      <MDBValidationItem className='col-md-4'>
-        <MDBInput
-          value={formValue.lname}
-          name='lname'
-          onChange={onChange}
-          id='validationCustom02'
-          required
-          label='Last name'
-        />
-      </MDBValidationItem>
-      <MDBValidationItem feedback='Please choose a username.' invalid className='col-md-4'>
-        <MDBInputGroup textBefore='@'>
-          <input
-            type='text'
-            className='form-control'
-            id='validationCustomUsername'
-            placeholder='Username'
-            required
-          />
-        </MDBInputGroup>
-      </MDBValidationItem>
-      <MDBValidationItem className='col-md-6' feedback='Please provide a valid city.' invalid>
-        <MDBInput
-          value={formValue.city}
-          name='city'
-          onChange={onChange}
-          id='validationCustom03'
-          required
-          label='City'
-        />
-      </MDBValidationItem>
-      <MDBValidationItem className='col-md-6' feedback='Please provide a valid zip.' invalid>
-        <MDBInput
-          value={formValue.zip}
-          name='zip'
-          onChange={onChange}
-          id='validationCustom05'
-          required
-          label='Zip'
-        />
-      </MDBValidationItem>
-      <MDBValidationItem className='col-12' feedback='You must agree before submitting.' invalid>
-        <MDBCheckbox label='Agree to terms and conditions' id='invalidCheck' required />
-      </MDBValidationItem>
-      <div className='col-12'>
-        <MDBBtn type='submit'>Submit form</MDBBtn>
-        <MDBBtn type='reset'>Reset form</MDBBtn>
-      </div>
-    </MDBValidation> */}
-    
