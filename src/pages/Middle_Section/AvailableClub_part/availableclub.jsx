@@ -31,11 +31,11 @@ const Availableclub = () => {
       },[])
     return (
         <div className="AvailableClub">
-            <div data-text="Available Club" class="light">Available Clubs</div>
+            <div data-text="Available Club" className="light">Available Clubs</div>
             {/* for search btn */}
-            <div class="search-box">
-                <button class="btn-search"><i class="fas fa-search"></i></button>
-                <input type="text" class="input-search" placeholder="Type to Search..." 
+            <div className="search-box">
+                <button className="btn-search"><i className="fas fa-search"></i></button>
+                <input type="text" className="input-search" placeholder="Type to Search..." 
                 onChange={e => {
                     setSearchTerm(e.target.value);
                 }}/>
