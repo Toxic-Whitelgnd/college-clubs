@@ -138,6 +138,7 @@ body{
 .card-cb{
   transform: translateZ(30px);
 }
+
 #title{
   font-family: 'Maven Pro', sans-serif;
 }
