@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/college-clubs/static/css/main.74c17ad2.css",
-    "main.js": "/college-clubs/static/js/main.2935d6b9.js",
+    "main.css": "/college-clubs/static/css/main.0aaf995b.css",
+    "main.js": "/college-clubs/static/js/main.2ac553c9.js",
     "static/js/787.537bcdc6.chunk.js": "/college-clubs/static/js/787.537bcdc6.chunk.js",
     "static/media/c3.png": "/college-clubs/static/media/c3.eceb9d561934ec575baa.png",
     "static/media/c4.jpg": "/college-clubs/static/media/c4.b8cdcf5c439970f75fc8.jpg",
@@ -9,6 +9,7 @@
     "static/media/a2.jpg": "/college-clubs/static/media/a2.6bd07194afb70594ba23.jpg",
     "static/media/3.jpg": "/college-clubs/static/media/3.9995b28e22b13f3ed4f1.jpg",
     "static/media/c1.jpg": "/college-clubs/static/media/c1.a813f8587fa7baf6082a.jpg",
+    "static/media/a8.jpg": "/college-clubs/static/media/a8.b1e83ad2c83c8a9774cd.jpg",
     "static/media/music.png": "/college-clubs/static/media/music.e350c5fa4957f9418437.png",
     "static/media/esports.png": "/college-clubs/static/media/esports.fe4d9b266b44609bb7d9.png",
     "static/media/a7.jpg": "/college-clubs/static/media/a7.7f055356bca530fe727d.jpg",
@@ -24,12 +25,12 @@
     "static/media/music3trans.png": "/college-clubs/static/media/music3trans.d06b55374449729e86db.png",
     "static/media/dance3trans.png": "/college-clubs/static/media/dance3trans.f3df8d485de971d7cef4.png",
     "index.html": "/college-clubs/index.html",
-    "main.74c17ad2.css.map": "/college-clubs/static/css/main.74c17ad2.css.map",
-    "main.2935d6b9.js.map": "/college-clubs/static/js/main.2935d6b9.js.map",
+    "main.0aaf995b.css.map": "/college-clubs/static/css/main.0aaf995b.css.map",
+    "main.2ac553c9.js.map": "/college-clubs/static/js/main.2ac553c9.js.map",
     "787.537bcdc6.chunk.js.map": "/college-clubs/static/js/787.537bcdc6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.74c17ad2.css",
-    "static/js/main.2935d6b9.js"
+    "static/css/main.0aaf995b.css",
+    "static/js/main.2ac553c9.js"
   ]
 }
