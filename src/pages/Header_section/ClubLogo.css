@@ -18,7 +18,12 @@
     text-align: center;
     height: 150px;
 }
-
+@media only screen and (max-width: 1500px)
+{
+    .logo{
+        margin-left: 550px;
+    }
+}
 @media only screen and (max-width: 1300px)
 {
     .logo{

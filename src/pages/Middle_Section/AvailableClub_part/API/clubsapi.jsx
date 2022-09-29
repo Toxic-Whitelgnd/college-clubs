@@ -4,7 +4,7 @@ import img3 from "../API/images/a4.jpg"
 import img4 from "../API/images/a5.jpg"
 import img5 from "../API/images/a6.jpg"
 import img6 from "../API/images/a7.jpg"
-
+import img7 from "../API/images/a8.jpg"
 
 const data = [
     {
@@ -17,7 +17,7 @@ const data = [
         facebook:"#",
         instagram:"#",
         linkedin:"#",
-        link:"#",
+        link:"https://forms.gle/B7JswhpFanD5qWC48",
         class:"card1",
         border:"primary",
         framework:"zoom-in-left"
@@ -34,7 +34,7 @@ const data = [
         title:"JU codeacdemy CLUB",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
         owner:"Virat Kholi",
-        link:"#",
+        link:"https://forms.gle/B7JswhpFanD5qWC48",
         class:"card2",
         framework:"fade-right",
         border:"dark"
@@ -51,7 +51,7 @@ const data = [
         linkedin:"#",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
         owner:"Virat Kholi",
-        link:"#",
+        link:"https://forms.gle/B7JswhpFanD5qWC48",
         class:"card3",
         framework:"zoom-in-up",
         border:"info"
@@ -65,7 +65,7 @@ const data = [
         title:"Saregama CLUB",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
         owner:"Virat Kholi",
-        link:"#",
+        link:"https://forms.gle/B7JswhpFanD5qWC48",
         class:"card2",
         facebook:"#",
         instagram:"#",
@@ -82,7 +82,24 @@ const data = [
         title:"Rock and Roll",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
         owner:"Virat Kholi",
-        link:"#",
+        link:"https://forms.gle/B7JswhpFanD5qWC48",
+        class:"card3",
+        facebook:"#",
+        instagram:"#",
+        linkedin:null,
+        framework:"zoom-in-down",
+        border:"secondary"
+    
+    },
+    {
+        id:6,
+        img:img7,
+        alt:"images",
+        type:"Photography",
+        title:"Capture Crew",
+        description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
+        owner:"Virat Kholi",
+        link:"https://forms.gle/B7JswhpFanD5qWC48",
         class:"card3",
         facebook:"#",
         instagram:"#",

@@ -82,7 +82,7 @@ const Availableclub = () => {
                                 <Card.Link className="insta" href={value.instagram}><Siico.SiInstagram></Siico.SiInstagram></Card.Link>
                                 </div>
 
-                                <Button variant="primary" onClick={()=> openweb(value.link)}>Website</Button>
+                                <Button variant="primary" onClick={()=> openweb(value.link)}>Join</Button>
                             </Card.Body>
                             
 
